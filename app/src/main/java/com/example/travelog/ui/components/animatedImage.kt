@@ -10,11 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.example.travelog.R
+import com.example.travelog.utils.Constants.ANIMATED_IMAGE_DURATION
 
 @Composable
 fun AnimatedImage(visible: Boolean) {
     val imageEnterTransition = fadeIn(
-        animationSpec = tween(2000)
+        animationSpec = tween(ANIMATED_IMAGE_DURATION)
     )
 
     AnimatedVisibility(

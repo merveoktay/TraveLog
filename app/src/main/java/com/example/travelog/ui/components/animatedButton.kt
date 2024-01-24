@@ -1,21 +1,22 @@
 package com.example.travelog.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.slideInVertically
 import androidx.compose.runtime.Composable
 import com.example.travelog.R
+import com.example.travelog.utils.Constants.ANIMATED_BUTTON_DELAY
+import com.example.travelog.utils.Constants.ANIMATED_TEXT_DELAY
+import com.example.travelog.utils.Constants.INITIAL_OFFSET
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AnimatedButton(visible: Boolean, onClick: () -> Unit) {
     val buttonEnterTransition = fadeIn(
-        animationSpec = tween(1000, 2600)
+        animationSpec = tween(ANIMATED_TEXT_DELAY, ANIMATED_BUTTON_DELAY)
     ) + slideInVertically(
-        initialOffsetY = { 100 },
-        animationSpec = tween(1000, 2600)
+        initialOffsetY = { INITIAL_OFFSET },
+        animationSpec = tween(ANIMATED_TEXT_DELAY, ANIMATED_BUTTON_DELAY)
     )
 
     AnimatedVisibility(

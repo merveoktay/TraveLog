@@ -13,14 +13,17 @@ import com.example.travelog.theme.Secondary_color
 import com.example.travelog.theme.Text_color
 import com.example.travelog.theme.TraveLogTheme
 import com.example.travelog.theme.White_color
+import com.example.travelog.utils.Constants.BORDER_SIZE
+import com.example.travelog.utils.Constants.ROUNDED_CORNER_SIZE
 
 @Composable
 fun SecondaryButton(buttonText:String){
     // button size is not exist
     Button(onClick = { /*TODO*/ },
         colors= ButtonDefaults.buttonColors(White_color),
-        modifier = Modifier.border(5.dp, Secondary_color, RoundedCornerShape(15.dp)),
-        shape = RoundedCornerShape(15.dp)
+        modifier = Modifier.border(BORDER_SIZE.dp, Secondary_color, RoundedCornerShape(
+            ROUNDED_CORNER_SIZE.dp)),
+        shape = RoundedCornerShape(ROUNDED_CORNER_SIZE.dp)
     ) {
         Text(text = buttonText, color = Text_color)
     }

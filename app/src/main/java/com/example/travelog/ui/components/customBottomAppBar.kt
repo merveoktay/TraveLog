@@ -16,13 +16,14 @@ import com.example.travelog.R
 import com.example.travelog.theme.Icon_color
 import com.example.travelog.theme.Second_background_color
 import com.example.travelog.theme.TraveLogTheme
+import com.example.travelog.utils.Constants.BOTTOM_APP_BAR_HEIGHT
 
 @Composable
 fun CustomBottomAppBar(){
     Scaffold (  modifier = Modifier
-        .height(85.dp) // height size comes from out
+        .height(BOTTOM_APP_BAR_HEIGHT.dp) // height size comes from out
         .fillMaxWidth(), containerColor = Second_background_color, contentColor = Icon_color
-    ){ it->
+    ){
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceEvenly,

@@ -10,14 +10,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import com.example.travelog.R
+import com.example.travelog.utils.Constants.ANIMATED_TEXT_DELAY
+import com.example.travelog.utils.Constants.ANIMATED_DURATION
+import com.example.travelog.utils.Constants.INITIAL_OFFSET
 
 @Composable
 fun AnimatedTitle(visible: Boolean) {
     val titleEnterTransition = fadeIn(
-        animationSpec = tween(1000, 1600)
+        animationSpec = tween(ANIMATED_DURATION, ANIMATED_TEXT_DELAY)
     ) + slideInVertically(
-        initialOffsetY = { -100 },
-        animationSpec = tween(1000, 1600)
+        initialOffsetY = { -INITIAL_OFFSET },
+        animationSpec = tween(ANIMATED_DURATION, ANIMATED_TEXT_DELAY)
     )
 
     AnimatedVisibility(
