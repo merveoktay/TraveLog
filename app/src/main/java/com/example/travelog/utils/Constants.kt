@@ -2,6 +2,7 @@ package com.example.travelog.utils
 
 object Constants {
 
+    const val LARGE_LOGO_TEXT_SIZE =52
     const val BORDER_SIZE = 5
     const val ROUNDED_CORNER_SIZE=15
     const val BOTTOM_APP_BAR_HEIGHT=85

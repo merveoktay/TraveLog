@@ -31,10 +31,10 @@ fun CustomBottomAppBar(){
                 .padding(it)
                 .fillMaxSize()
         ) {
-            IconButton(R.drawable.dark_home_icon)
-            IconButton(R.drawable.dark_plus_icon)
-            IconButton(R.drawable.dark_profile_icon)
-            IconButton(R.drawable.dark_heart_icon)
+            CustomIconButton(R.drawable.dark_home_icon)
+            CustomIconButton(R.drawable.dark_plus_icon)
+            CustomIconButton(R.drawable.dark_profile_icon)
+            CustomIconButton(R.drawable.dark_heart_icon)
         }
     }
 }

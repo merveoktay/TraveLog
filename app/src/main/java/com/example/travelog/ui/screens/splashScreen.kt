@@ -3,25 +3,35 @@ package com.example.travelog.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.toFontFamily
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.travelog.R
+import com.example.travelog.theme.Icon_color
 import com.example.travelog.theme.TraveLogTheme
 import com.example.travelog.theme.splash_screen_color
 import com.example.travelog.ui.components.AnimatedImage
 import com.example.travelog.ui.components.AnimatedTitle
-import com.example.travelog.ui.components.IconButton
+import com.example.travelog.ui.components.CustomIconButton
 
 @Composable
 fun SplashScreen() {
@@ -54,16 +64,21 @@ fun WelcomeScreenContent(
             Spacer(modifier = Modifier.height(50.dp))
             AnimatedImage(visible = visible)
 
-            Column(
-                horizontalAlignment = Alignment.End,
-                verticalArrangement = Arrangement.Bottom,
+            Row(
+                horizontalArrangement = Arrangement.End,
+                verticalAlignment = Alignment.Bottom,
                 modifier = Modifier
                     .fillMaxSize()
                     .background(
                         splash_screen_color
-                    ).padding(50.dp)
+                    )
+                    .padding(30.dp)
             ) {
-                IconButton(iconRes = R.drawable.dark_right_arrow)
+
+                    Text(text = stringResource(R.string.next), color = Icon_color, style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 14.sp), modifier = Modifier.align(Alignment.Bottom).padding(bottom=15.dp), fontFamily = Font(R.font.fredoka_medium).toFontFamily())
+                    CustomIconButton(iconRes = R.drawable.ic_arrow)
+
+
             }
 
         }

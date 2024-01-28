@@ -23,6 +23,6 @@ fun AnimatedButton(visible: Boolean, onClick: () -> Unit) {
         visible = visible,
         enter = buttonEnterTransition,
     ) {
-         IconButton(iconRes = R.drawable.dark_right_arrow)
+         CustomIconButton(iconRes = R.drawable.dark_right_arrow)
     }
 }
