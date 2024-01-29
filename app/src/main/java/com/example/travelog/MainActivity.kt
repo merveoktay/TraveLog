@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import com.example.travelog.theme.TraveLogTheme
+import com.example.travelog.ui.components.Stars
 import com.example.travelog.ui.screens.SplashScreen
 
 class MainActivity : ComponentActivity() {
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
             TraveLogTheme {
                 Column (modifier = Modifier
                     .fillMaxSize()){
-                    SplashScreen()
+                    Stars()
                 }
 
             }

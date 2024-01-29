@@ -11,5 +11,11 @@ object Constants {
     const val ANIMATED_TEXT_DELAY=1600
     const val ANIMATED_BUTTON_DELAY=2600
     const val INITIAL_OFFSET= 100
+    const val SPACER_MIN=10
+    const val SPACER_MED=20
+    const val SPACER_LARGE=40
+    const val FONT_SIZE_MID =18
+    const val FONT_SIZE_MIN=14
+    const val FONT_SIZE_LARGE=42
 
 }

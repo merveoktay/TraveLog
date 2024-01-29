@@ -32,6 +32,7 @@ import com.example.travelog.theme.splash_screen_color
 import com.example.travelog.ui.components.AnimatedImage
 import com.example.travelog.ui.components.AnimatedTitle
 import com.example.travelog.ui.components.CustomIconButton
+import com.example.travelog.utils.Constants.FONT_SIZE_MIN
 
 @Composable
 fun SplashScreen() {
@@ -75,7 +76,7 @@ fun WelcomeScreenContent(
                     .padding(30.dp)
             ) {
 
-                    Text(text = stringResource(R.string.next), color = Icon_color, style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 14.sp), modifier = Modifier.align(Alignment.Bottom).padding(bottom=15.dp), fontFamily = Font(R.font.fredoka_medium).toFontFamily())
+                    Text(text = stringResource(R.string.next), color = Icon_color, style = TextStyle(fontWeight = FontWeight.Bold, fontSize = FONT_SIZE_MIN.sp), modifier = Modifier.align(Alignment.Bottom).padding(bottom=15.dp), fontFamily = Font(R.font.fredoka_medium).toFontFamily())
                     CustomIconButton(iconRes = R.drawable.ic_arrow)
 
 
